@@ -3,9 +3,9 @@ const path = require("path");
 require("./db/conn");
 const User = require("./models/usermessage");
 const hbs = require("hbs");
-const app = express();
-const port = process.env.PORT || 27017;
 
+const app = express();
+const port = process.env.PORT || 80;
 
 // setting the path 
 const staticpath = path.join(__dirname, "../public");
@@ -22,6 +22,7 @@ app.use(express.static(staticpath))
 app.set("view engine", "hbs");
 app.set("views", templatepath);
 hbs.registerPartials(partialpath);
+
 
 // routing 
 // app.get( path, callback )
