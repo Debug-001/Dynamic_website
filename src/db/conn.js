@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // creating a database 
-mongoose.connect("mongodb://localhost:27017/Omdynamic", {
+mongoose.connect("mongodb+srv://dynamic:<password>@dynamicusr.cfskf.mongodb.net/Data", {
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(() => {
